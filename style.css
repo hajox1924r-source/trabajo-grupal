@@ -21,20 +21,42 @@ body { font-family: system-ui, Arial, sans-serif; color: #1f2937; line-height: 1
 .img-frame img { width: 100%; border-radius: 12px; }
 .img-frame figcaption { font-size: 13px; color: #94a3b8; margin-top: 8px; text-align: center; }
 
+/* Secciones generales */
+main > section { padding: 55px 0; border-bottom: 1px solid #e5e7eb; }
+main > section:nth-child(even) { background: #fff; }
+.sechead { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.sechead .n { background: #2563eb; color: #fff; padding: 4px 10px; border-radius: 6px; font-weight: 700; }
+.sechead h2 { font-size: 26px; }
+.lead { font-weight: 700; color: #111827; margin: 18px 0 8px; }
+.section-tagline { color: #6b7280; margin-bottom: 16px; }
+main > section p { margin-bottom: 12px; }
+
 /* Descripción */
-.descripcion-section { padding: 60px 20px; }
-.section-header { margin-bottom: 30px; }
-.text-center { text-align: center; }
-.section-tagline { color: #6b7280; }
-.descripcion-content p { margin-bottom: 16px; }
 .descripcion-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .feature-pill { background: #e0e7ff; color: #3730a3; padding: 8px 14px; border-radius: 20px; font-size: 14px; }
 
+/* Listas (objetivos) */
+main ul { padding-left: 22px; margin-bottom: 12px; }
+main ul li { margin-bottom: 10px; }
+
+/* Tabla (metodología) */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #fff; }
+th, td { border: 1px solid #d1d5db; padding: 10px 12px; text-align: left; font-size: 15px; }
+th { background: #111827; color: #fff; }
+tbody tr:nth-child(even) { background: #f3f4f6; }
+
+/* Tecnologías (lista ordenada) */
+.tecnologias-list { list-style: none; counter-reset: tec; display: grid; gap: 14px; }
+.tecnologias-list li { counter-increment: tec; background: #fff; border: 1px solid #e5e7eb;
+  border-radius: 10px; padding: 16px 18px 16px 54px; position: relative; }
+.tecnologias-list li::before { content: counter(tec); position: absolute; left: 16px; top: 16px;
+  background: #2563eb; color: #fff; width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.tecnologias-list strong { display: block; margin-bottom: 4px; }
+.tecnologias-list span { color: #6b7280; font-size: 15px; }
+
 /* Contacto */
-#contacto { max-width: 600px; margin: 0 auto; padding: 60px 20px; }
-.sechead { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.sechead .n { background: #2563eb; color: #fff; padding: 4px 10px; border-radius: 6px; font-weight: 700; }
-.lead { color: #6b7280; margin-bottom: 24px; }
+#contacto form { max-width: 600px; }
 .fg { margin-bottom: 16px; display: flex; flex-direction: column; }
 .fg label { font-weight: 600; margin-bottom: 6px; }
 .fg input, .fg textarea { padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 15px; }
@@ -42,4 +64,4 @@ body { font-family: system-ui, Arial, sans-serif; color: #1f2937; line-height: 1
 button[type="submit"] { background: #2563eb; color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-size: 15px; cursor: pointer; }
 button[type="submit"]:hover { background: #1d4ed8; }
 
-@media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } .nav-menu { gap: 12px; } }
