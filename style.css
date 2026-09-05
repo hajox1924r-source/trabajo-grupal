@@ -299,3 +299,16 @@ button[type="submit"]:hover {
         gap: 12px;
     }
 }
+
+/* ===== Árbol de problema ===== */
+.arbol-figura {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.arbol-figura img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
